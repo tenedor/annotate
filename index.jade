@@ -1,0 +1,23 @@
+extends jade/page.jade
+
+block name
+  -name = "home"
+
+block basePath
+  -basePath = ""
+
+block relativePath
+  -relativePath = ""
+
+block content
+  h1 Annotateables
+  h2 Expert Systems
+  h3 Cohen
+  //p brief description of the following things
+  ul
+    li
+      a(target='_blank', href='r/cohen-1987-information-retrieval-by-constrained-spreading-activation-in-semantic-networks.pdf')
+        | Cohen, Kjeldsen - 1987 -
+        b
+          | Information retrieval by constrained spreading activation in
+          | semantic networks

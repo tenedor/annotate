@@ -1,0 +1,17 @@
+body {
+  padding: 30px 50px;
+  background-color: #eee;
+}
+
+#content {
+  width: 650px;
+  margin: 0 auto;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+h1, h2, p {
+  color: #444;
+}
