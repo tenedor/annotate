@@ -10,14 +10,27 @@ block relativePath
   -relativePath = ""
 
 block content
+  -
+    sections = [
+      ["Expert Systems", [
+        ["Cohen", [
+          ["Cohen, Kjeldsen", "1987", "Information retrieval by constrained spreading activation in semantic networks", "r/cohen-1987-information-retrieval-by-constrained-spreading-activation-in-semantic-networks.pdf"],
+        ]],
+      ]],
+    ]
+
   h1 Annotateables
-  h2 Expert Systems
-  h3 Cohen
-  //p brief description of the following things
-  ul
-    li
-      a(target='_blank', href='r/cohen-1987-information-retrieval-by-constrained-spreading-activation-in-semantic-networks.pdf')
-        | Cohen, Kjeldsen - 1987 -
-        b
-          | Information retrieval by constrained spreading activation in
-          | semantic networks
+  each section in sections
+    h2 #{section[0]}
+    each author in section[1]
+      h3 #{author[0]}
+      ul
+        each paper in author[1]
+          -auth = paper[0]
+          -date = paper[1]
+          -title = paper[2]
+          -url = paper[3]
+          li
+            a(target='_blank', href=url)
+              | #{auth} - #{date} - 
+              b #{title}
